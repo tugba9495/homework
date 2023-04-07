@@ -6,11 +6,8 @@
         yum:
           name: httpd
           state: latest
-      - name: start apache
+      - name: start and enable  apache
         systemd:
           name: httpd
           state: started
-      - name: enable apache
-        systemd:
-          name: httpd
-          enabled: true
+          enabled: True
